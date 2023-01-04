@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="confetti.js"></script>
+    <script src="probar.js"></script>
+    
+    <title>Capacitaciones</title>
+</head>
+<body>
+    <h1>Capacitación APIs</h1>
+
+    <canvas class="confetti" id="canvas"></canvas>
+    
+    
+
+    <section>
+        <h2>Documentación de la API</h2>
+        <div>
+            <p><i>Descripción: </i>Esta API permite crear solicitudes internas en Service Now. El grupo de asignación va en el endpoint y los datos del ticket en el body. Hay parámetros que son obligatorio y otros que son opcionales</p>
+
+            <div class="agrupado2">
+            <p><i>Endpoint: </i>service_now/crear_ticket/ <i id="sinDec">[grupo de asignacion]</i></p>
+
+            <div class="agrupado"><i>Grupos de asignación disponibles: </i>
+                <ul>
+                    <li>SAP</li>
+                    <li>SN</li>
+                    <li>EC</li>
+                </ul>
+            </div>
+
+            <p><i>Ejemplo de URL: </i>service_now/crear_ticket/SAP</p>
+
+            <p><i>Método: </i>POST</p>
+            </div>
+
+            <div class="agrupado2">
+            <div class="agrupado"><i>Ejemplo de body: </i><div>
+                <p>{autor: nombre;</p>
+                <p>titulo: el que quieras;</p>
+                <p>descripcion: lo que digas}</p>
+            </div></div>
+
+            <p><i>Parámetro opcional del body: </i>prioridad</p>
+        
+            <div class="agrupado"><i>Valores disponibles para prioridad: </i>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul></div>
+            </div>
+
+            <div class="agrupado2">
+            <div class="agrupado"><i>Ejemplo de response: </i><div>
+                <p>{status: 201;</p>
+                <p>ID: 20252}</p>
+            </div></div></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Llamada a la API</h2>
+        <form id="form">
+            <div class="formulario">
+                <label for="url" class="ancho">Endpoint: </label>
+                <input type="text" name="url" id="url">
+            </div>
+            <div class="formulario">
+                <label for="metodo" class="ancho">Método: </label>
+                <select name="metodo" id="metodo">
+                    <option value="get">GET</option>
+                    <option value="post">POST</option>
+                    <option value="delete">DELETE</option>
+                </select>
+            </div>
+            <div class="formulario">
+                <label for="body" class="ancho">Body: </label>
+                <textarea name="body" id="body" cols="70" rows="6">{ escribí los parámetros y valores aquí }</textarea>
+            </div>
+            <button type="submit" id="boton" >PROBAR</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Resultado</h2>
+        <div id="resultado"></div>
+    </section>
+
+    
+</body>
+</html>
