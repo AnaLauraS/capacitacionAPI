@@ -10,13 +10,13 @@ window.addEventListener("load", (e) => {
         let texto = document.getElementById("resultado");
         if (validarEndp(endpoint.value)===true & validarBody(body.value)===true & validarMet(metodo.value)===true){
             texto.innerHTML=`<div>
-                    <p>{status: 201;</p>
+                    <p>{status: 201,</p>
                     <p>ID: 20252}</p>
                 </div>
                 <p class="resultadoB">¡LO LOGRASTE! Usaste una API</p>`
         } else {
             texto.innerHTML=`<div>
-                    <p>{status: 400;</p>
+                    <p>{status: 400,</p>
                     <p>message: error de datos}</p>
                 </div>
                 <p class="resultadoM">Revisá la documentación, algo escribiste mal</p>`

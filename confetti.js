@@ -26,7 +26,7 @@ const colors = [
 //-----------Functions--------------
 resizeCanvas = () => {
   canvas.width = window.innerWidth*0.95;
-  canvas.height = window.innerHeight*1.37;
+  canvas.height = window.innerHeight;
   cx = ctx.canvas.width / 2;
   cy = ctx.canvas.height / 2;
 };
